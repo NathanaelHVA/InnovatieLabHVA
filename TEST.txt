@@ -1,3 +1,0 @@
-TEST
-1234
-Tim TEST potmeter is getest
