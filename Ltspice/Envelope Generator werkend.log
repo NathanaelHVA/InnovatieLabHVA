@@ -1,8 +1,8 @@
 LTspice 24.1.10 for Windows
-Circuit: C:\school C\Github_Kuno\InnovatieLabHVA\Ltspice\Envelope Generator werkend.net
-Start Time: Mon Nov  9 14:10:47 2026
+Circuit: C:\InnovatieLabHVA\Ltspice\Envelope Generator werkend.net
+Start Time: Mon Nov  9 23:03:11 2026
 solver = Normal
-Maximum thread count: 16
+Maximum thread count: 22
 tnom = 27
 temp = 27
 method = trap
@@ -17,76 +17,48 @@ Gmin = 0.000142725
 Gmin = 1.5325e-05
 Gmin = 1.6455e-06
 Gmin = 1.76685e-07
+Gmin = 1.89714e-08
 vernier = 0.5
-Gmin = 2.96428e-08
 vernier = 0.25
 vernier = 0.333333
-Gmin = 1.59664e-08
+Gmin = 1.43698e-08
 vernier = 0.166667
 vernier = 0.222222
-Gmin = 1.05089e-08
+Gmin = 9.70692e-09
 vernier = 0.296296
 vernier = 0.148148
-Gmin = 7.19068e-09
+Gmin = 6.76052e-09
 vernier = 0.197531
 vernier = 0.263374
 vernier = 0.131687
-Gmin = 5.007e-09
+Gmin = 4.72623e-09
 vernier = 0.175583
-Gmin = 3.43523e-09
+Gmin = 3.20851e-09
 vernier = 0.23411
 vernier = 0.117055
 vernier = 0.156073
-Gmin = 2.63887e-09
+Gmin = 2.47628e-09
 vernier = 0.208098
-Gmin = 1.67021e-09
 vernier = 0.277464
-vernier = 0.138732
-vernier = 0.184976
-Gmin = 1.2298e-09
-vernier = 0.246634
-vernier = 0.123317
-Gmin = 9.22576e-10
-vernier = 0.164423
-vernier = 0.21923
-vernier = 0.109615
-Gmin = 6.86358e-10
-vernier = 0.146154
-vernier = 0.194871
-Gmin = 4.86582e-10
-vernier = 0.259828
-vernier = 0.129914
-Gmin = 3.48514e-10
-vernier = 0.173219
-vernier = 0.230959
-vernier = 0.115479
-Gmin = 2.53508e-10
-vernier = 0.153972
-Gmin = 1.82042e-10
-vernier = 0.205296
-vernier = 0.273728
-vernier = 0.136864
-Gmin = 1.25527e-10
-vernier = 0.182486
-Gmin = 8.39546e-11
-vernier = 0.243314
-vernier = 0.324419
-Gmin = 4.31223e-11
-vernier = 0.432558
-vernier = 0.576744
-Gmin = 1.52197e-11
-vernier = 0.768992
-Gmin = 3.09187e-12
+Gmin = 1.52282e-09
+vernier = 0.369952
+Gmin = 6.99735e-10
+vernier = 0.493269
+vernier = 0.657691
+Gmin = 2.01916e-10
+vernier = 0.876922
 vernier = 1
-Gmin = 3.31987e-13
+Gmin = 3.11468e-11
+Gmin = 3.34436e-12
+Gmin = 3.59098e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
-Total elapsed time: 1.121 seconds.
+Total elapsed time: 0.328 seconds.
 
 Files loaded:
-C:\school C\Github_Kuno\InnovatieLabHVA\Ltspice\Envelope Generator werkend.net
-C:\Users\kunok\AppData\Local\LTspice\lib\cmp\standard.dio
-C:\Users\kunok\AppData\Local\LTspice\lib\sub\LTC5.lib
-C:\Users\kunok\AppData\Local\LTspice\lib\sub\NE555.sub
+C:\InnovatieLabHVA\Ltspice\Envelope Generator werkend.net
+C:\Users\Natha\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\Natha\AppData\Local\LTspice\lib\sub\LTC5.lib
+C:\Users\Natha\AppData\Local\LTspice\lib\sub\NE555.sub
 

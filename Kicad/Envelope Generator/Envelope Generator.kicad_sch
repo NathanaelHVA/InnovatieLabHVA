@@ -277,6 +277,532 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Conn_01x02_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Pin"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x02_Pin_1_1"
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Conn_01x06_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x06_Pin"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x06, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x06_Pin_1_1"
+				(rectangle
+					(start 0.8636 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 5.08) (xy 0.8636 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -973,7 +1499,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Timer:ICM7555xB"
+		(symbol "Timer:ICM7555xP"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -990,7 +1516,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "ICM7555xB"
+			(property "Value" "ICM7555xP"
 				(at 2.54 8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1001,8 +1527,8 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-				(at 0 -24.13 0)
+			(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+				(at 0 -22.86 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1013,7 +1539,7 @@
 				)
 			)
 			(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf"
-				(at 0 -26.67 0)
+				(at 0 -25.4 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1023,8 +1549,8 @@
 					)
 				)
 			)
-			(property "Description" "CMOS General Purpose Timer, 555 compatible, SOIC-8"
-				(at 0 -21.59 0)
+			(property "Description" "CMOS General Purpose Timer, 555 compatible, PDIP-8"
+				(at 0 -20.32 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1045,7 +1571,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
+			(property "ki_fp_filters" "DIP*W7.62mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1056,7 +1582,7 @@
 					)
 				)
 			)
-			(symbol "ICM7555xB_0_0"
+			(symbol "ICM7555xP_0_0"
 				(pin power_in line
 					(at 0 -10.16 90)
 					(length 2.54)
@@ -1094,7 +1620,7 @@
 					)
 				)
 			)
-			(symbol "ICM7555xB_0_1"
+			(symbol "ICM7555xP_0_1"
 				(rectangle
 					(start -7.62 7.62)
 					(end 7.62 -7.62)
@@ -1107,7 +1633,7 @@
 					)
 				)
 			)
-			(symbol "ICM7555xB_1_1"
+			(symbol "ICM7555xP_1_1"
 				(pin input line
 					(at -10.16 -5.08 0)
 					(length 2.54)
@@ -2297,6 +2823,86 @@
 		(uuid "f3fa3310-b026-40b5-a0b3-e52662d5a013")
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 208.28 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10910ec9-086b-44f8-b408-d8deb914c1da")
+		(property "Reference" "J5"
+			(at 208.915 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 208.915 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 208.28 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 208.28 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38a66b2f-f956-4407-9bc6-1fe79f78dcd9")
+		)
+		(pin "2"
+			(uuid "5eedf280-8090-47de-8c67-974821f90682")
+		)
+		(instances
+			(project "Envelope Generator"
+				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 129.54 109.22 0)
 		(unit 1)
@@ -2464,7 +3070,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "21170020-0edf-40cb-82ff-3743addfdf20")
-		(property "Reference" "RV2"
+		(property "Reference" "RDecay1"
 			(at 97.79 93.98 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2484,7 +3090,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Piher_PT-10-H05_Horizontal"
 			(at 97.79 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2562,7 +3168,7 @@
 		(instances
 			(project "Envelope Generator"
 				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
-					(reference "RV2")
+					(reference "RDecay1")
 					(unit 1)
 				)
 			)
@@ -2580,7 +3186,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "286eda85-5fca-4a69-9616-9bf8fabe5ea3")
-		(property "Reference" "RV4"
+		(property "Reference" "RRel1"
 			(at 123.19 86.36 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2600,7 +3206,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Piher_PT-10-H05_Horizontal"
 			(at 123.19 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -2678,14 +3284,14 @@
 		(instances
 			(project "Envelope Generator"
 				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
-					(reference "RV4")
+					(reference "RRel1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Timer:ICM7555xB")
+		(lib_id "Timer:ICM7555xP")
 		(at 147.32 90.17 0)
 		(unit 1)
 		(body_style 1)
@@ -2695,7 +3301,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2959b05b-0321-42b1-ae11-3935d490792e")
+		(uuid "3bc81945-ef62-4b73-9253-0fcc0bc72fe9")
 		(property "Reference" "U1"
 			(at 161.29 83.7498 0)
 			(show_name no)
@@ -2706,7 +3312,7 @@
 				)
 			)
 		)
-		(property "Value" "ICM7555xB"
+		(property "Value" "ICM7555xP"
 			(at 161.29 86.2898 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2716,8 +3322,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 147.32 114.3 0)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 147.32 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2728,7 +3334,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf"
-			(at 147.32 116.84 0)
+			(at 147.32 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2738,8 +3344,8 @@
 				)
 			)
 		)
-		(property "Description" "CMOS General Purpose Timer, 555 compatible, SOIC-8"
-			(at 147.32 111.76 0)
+		(property "Description" "CMOS General Purpose Timer, 555 compatible, PDIP-8"
+			(at 147.32 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2748,30 +3354,30 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "4"
-			(uuid "51f0f17e-0650-4126-92f7-fb81b75190b3")
 		)
 		(pin "1"
-			(uuid "727c5dd8-1889-4aa7-9a2b-ce42de614355")
-		)
-		(pin "3"
-			(uuid "f329558f-954d-4e53-809e-51a54ee3b837")
-		)
-		(pin "7"
-			(uuid "e8049bb8-7500-49b2-89d1-96a76d296a38")
-		)
-		(pin "6"
-			(uuid "80964afa-47e6-4635-9035-064ee256e0e0")
+			(uuid "73884bb2-18ed-400e-8742-558eb0cea351")
 		)
 		(pin "2"
-			(uuid "abfffc5e-2be3-424e-9ffe-1fee89d77aab")
-		)
-		(pin "5"
-			(uuid "cf8b2758-28ee-4ab1-a782-98a8572605dc")
+			(uuid "973a3f43-7781-46d5-aa80-4830016fc36f")
 		)
 		(pin "8"
-			(uuid "0751c819-23a7-4c59-9331-020e0e5e80af")
+			(uuid "c192966a-6c20-4e63-b734-ddf26f3b566a")
+		)
+		(pin "4"
+			(uuid "4412155f-1e92-4389-8370-b4adabecd04b")
+		)
+		(pin "3"
+			(uuid "05316c57-1ada-4825-b1d8-9470dc911110")
+		)
+		(pin "7"
+			(uuid "fa7fbcdf-4b33-44b2-94bb-35478298a22b")
+		)
+		(pin "5"
+			(uuid "c832ef1a-f43c-4a4f-a1f5-7c97a2a56c09")
+		)
+		(pin "6"
+			(uuid "c433933b-0c66-4e98-9853-e05113c336d0")
 		)
 		(instances
 			(project "Envelope Generator"
@@ -2814,7 +3420,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 132.08 84.328 90)
 			(hide yes)
 			(show_name no)
@@ -3128,7 +3734,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 104.14 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -3206,7 +3812,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5c8919ee-e15f-4e58-8061-efdb5c043693")
-		(property "Reference" "RV3"
+		(property "Reference" "RSus1"
 			(at 130.81 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3226,7 +3832,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Piher_PT-10-H05_Horizontal"
 			(at 130.81 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -3304,7 +3910,7 @@
 		(instances
 			(project "Envelope Generator"
 				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
-					(reference "RV3")
+					(reference "RSus1")
 					(unit 1)
 				)
 			)
@@ -3341,7 +3947,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 134.62 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -3445,7 +4051,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 123.19 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -3625,7 +4231,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 227.33 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -3659,34 +4265,114 @@
 			)
 		)
 		(pin "6"
-			(uuid "955f9f61-c04d-4e1d-a5ec-8a53ecdd9272")
+			(uuid "955f9f61-c04d-4e1d-a5ec-8a53ecdd9273")
 		)
 		(pin "1"
-			(uuid "8d5126ea-8c47-45a4-adcf-9d51c565b432")
+			(uuid "8d5126ea-8c47-45a4-adcf-9d51c565b433")
 		)
 		(pin "7"
-			(uuid "c4cb8325-aee6-4f91-962e-5abf3cccb32f")
+			(uuid "c4cb8325-aee6-4f91-962e-5abf3cccb330")
 		)
 		(pin "5"
-			(uuid "bd2c5701-8e3b-4427-abf9-6bbf16835b2d")
+			(uuid "bd2c5701-8e3b-4427-abf9-6bbf16835b2e")
 		)
 		(pin "4"
-			(uuid "ce781b68-7070-4e7b-958f-f6368338d8a5")
+			(uuid "ce781b68-7070-4e7b-958f-f6368338d8a6")
 		)
 		(pin "2"
-			(uuid "808a8dcf-d6c6-4625-8aa7-4c65906edffc")
+			(uuid "808a8dcf-d6c6-4625-8aa7-4c65906edffd")
 		)
 		(pin "3"
-			(uuid "a2d84e86-a06b-4c2a-9061-bcd19517deeb")
+			(uuid "a2d84e86-a06b-4c2a-9061-bcd19517deec")
 		)
 		(pin "8"
-			(uuid "f8685393-39a5-4ecb-b1e2-63db70f5c48b")
+			(uuid "f8685393-39a5-4ecb-b1e2-63db70f5c48c")
 		)
 		(instances
 			(project "Envelope Generator"
 				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
 					(reference "U2")
 					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 231.14 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "91fda167-9aa6-497f-912a-7eb4dcaaeb3e")
+		(property "Reference" "J3"
+			(at 231.775 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 231.775 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 231.14 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 231.14 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1964c179-7015-4d55-8883-ce7af0aacbe0")
+		)
+		(pin "2"
+			(uuid "dca00323-3998-4549-a418-f34e50c80595")
+		)
+		(instances
+			(project "Envelope Generator"
+				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
+					(reference "J3")
+					(unit 1)
 				)
 			)
 		)
@@ -3725,7 +4411,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 127.762 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -3805,7 +4491,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 173.99 91.948 90)
 			(hide yes)
 			(show_name no)
@@ -3932,6 +4618,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x06_Pin")
+		(at 187.96 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a893de4b-0c3a-455d-8ed0-66b6aa099b34")
+		(property "Reference" "J4"
+			(at 188.595 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x06_Pin"
+			(at 188.595 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+			(at 187.96 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 187.96 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "bf5acd06-f562-4e3f-bfc1-040c47c1a815")
+		)
+		(pin "5"
+			(uuid "6990ac1a-5d7e-4bfe-8cba-5143dc3ee831")
+		)
+		(pin "6"
+			(uuid "4bb8940d-28e6-4bca-844e-d25c0b037cba")
+		)
+		(pin "2"
+			(uuid "63873a2e-0fb6-4506-bd49-e0482bdc9f4f")
+		)
+		(pin "1"
+			(uuid "ec828327-0a31-424f-b889-b59c04657aab")
+		)
+		(pin "3"
+			(uuid "d1b6611c-3970-42a6-b30f-f3d6d5589067")
+		)
+		(instances
+			(project "Envelope Generator"
+				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D")
 		(at 123.19 74.93 270)
 		(unit 1)
@@ -3962,7 +4740,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 123.19 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -4064,7 +4842,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 118.11 119.6848 0)
 			(hide yes)
 			(show_name no)
@@ -4113,6 +4891,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 208.28 149.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b89e0195-b821-4c6f-8c5d-15c5d3edc381")
+		(property "Reference" "J1"
+			(at 208.915 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 208.915 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 208.28 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 208.28 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "74698a86-9e7c-4a72-ad65-51f580a19d4c")
+		)
+		(pin "2"
+			(uuid "3fbecb34-465a-4aa4-922c-071b836165db")
+		)
+		(instances
+			(project "Envelope Generator"
+				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 119.38 64.77 90)
 		(unit 1)
@@ -4144,7 +5002,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 119.38 66.548 90)
 			(hide yes)
 			(show_name no)
@@ -4224,7 +5082,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 86.36 89.408 90)
 			(hide yes)
 			(show_name no)
@@ -4306,7 +5164,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 185.42 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -4388,7 +5246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1f30804-9a80-44e5-83a9-528f409234fd")
-		(property "Reference" "RV1"
+		(property "Reference" "RAtt1"
 			(at 185.42 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4408,7 +5266,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Piher_PT-10-H05_Horizontal"
 			(at 185.42 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -4486,7 +5344,87 @@
 		(instances
 			(project "Envelope Generator"
 				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
-					(reference "RV1")
+					(reference "RAtt1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 228.6 149.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2ddea9c-f512-49b9-938e-90bb0a3dddea")
+		(property "Reference" "J2"
+			(at 229.235 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 229.235 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 228.6 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 228.6 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ef355e4-c182-4101-a34a-177c2eb69a9a")
+		)
+		(pin "2"
+			(uuid "618333a5-a56e-45f9-b053-00bdd1d6cd57")
+		)
+		(instances
+			(project "Envelope Generator"
+				(path "/840c554b-c3b1-4089-b3af-0632f10419a5"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -4604,7 +5542,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 213.36 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -4638,28 +5576,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "955f9f61-c04d-4e1d-a5ec-8a53ecdd9272")
+			(uuid "955f9f61-c04d-4e1d-a5ec-8a53ecdd9274")
 		)
 		(pin "1"
-			(uuid "8d5126ea-8c47-45a4-adcf-9d51c565b432")
+			(uuid "8d5126ea-8c47-45a4-adcf-9d51c565b434")
 		)
 		(pin "7"
-			(uuid "c4cb8325-aee6-4f91-962e-5abf3cccb32f")
+			(uuid "c4cb8325-aee6-4f91-962e-5abf3cccb331")
 		)
 		(pin "5"
-			(uuid "bd2c5701-8e3b-4427-abf9-6bbf16835b2d")
+			(uuid "bd2c5701-8e3b-4427-abf9-6bbf16835b2f")
 		)
 		(pin "4"
-			(uuid "ce781b68-7070-4e7b-958f-f6368338d8a5")
+			(uuid "ce781b68-7070-4e7b-958f-f6368338d8a7")
 		)
 		(pin "2"
-			(uuid "808a8dcf-d6c6-4625-8aa7-4c65906edffc")
+			(uuid "808a8dcf-d6c6-4625-8aa7-4c65906edffe")
 		)
 		(pin "3"
-			(uuid "a2d84e86-a06b-4c2a-9061-bcd19517deeb")
+			(uuid "a2d84e86-a06b-4c2a-9061-bcd19517deed")
 		)
 		(pin "8"
-			(uuid "f8685393-39a5-4ecb-b1e2-63db70f5c48b")
+			(uuid "f8685393-39a5-4ecb-b1e2-63db70f5c48d")
 		)
 		(instances
 			(project "Envelope Generator"
@@ -4704,7 +5642,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 225.0948 44.45 0)
 			(hide yes)
 			(show_name no)
