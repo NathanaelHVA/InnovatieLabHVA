@@ -6489,7 +6489,7 @@
 		(fields_autoplaced yes)
 		(uuid "ee6dea29-e18d-4ba1-8937-2cb1c4fdd2af")
 		(property "Reference" "C2"
-			(at 238.6552 43.1799 0)
+			(at 238.76 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6499,8 +6499,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "C"
-			(at 238.6552 45.7199 0)
+		(property "Value" "100uF"
+			(at 238.76 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
