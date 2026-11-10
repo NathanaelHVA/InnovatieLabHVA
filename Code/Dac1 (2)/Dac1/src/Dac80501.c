@@ -1,6 +1,6 @@
 /*!
  * \file    Dac80501.c
- * \brief   Initialisatie van SPIC en de twee DAC80501 (zie dac80501.h)
+ * \brief   Initialisatie van SPID en de DAC80501('s) (zie dac80501.h, DAC_AANTAL)
  */
 
 #ifndef F_CPU
@@ -14,12 +14,14 @@ void dac80501_init(void)
 {
     // SYNC eerst hoog (DAC niet geselecteerd), daarna pas als uitgang: geen glitch
     DAC1_SYNC_PORT.OUTSET = DAC1_SYNC_bm;
-    DAC2_SYNC_PORT.OUTSET = DAC2_SYNC_bm;
     DAC1_SYNC_PORT.DIRSET = DAC1_SYNC_bm;
+#if DAC_AANTAL > 1
+    DAC2_SYNC_PORT.OUTSET = DAC2_SYNC_bm;
     DAC2_SYNC_PORT.DIRSET = DAC2_SYNC_bm;
+#endif
 
     // Bij de XMEGA moet je MOSI en SCK zelf als uitgang zetten (SS ook, zie SYNC hierboven).
-    // SCK is in rust laag (mode 1). MISO (PC6) blijft ingang.
+    // SCK is in rust laag (mode 1). MISO (PD6) blijft ingang.
     DAC_SPI_PORT.OUTCLR = DAC_SCK_bm | DAC_MOSI_bm;
     DAC_SPI_PORT.DIRSET = DAC_SCK_bm | DAC_MOSI_bm;
 

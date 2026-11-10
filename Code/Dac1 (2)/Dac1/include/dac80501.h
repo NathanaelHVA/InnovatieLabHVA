@@ -1,13 +1,13 @@
 /*!
  * \file    dac80501.h
- * \brief   Driver voor twee DAC80501 (16 bit, SPI) op één gedeelde SPI-bus (SPIC)
+ * \brief   Driver voor één of twee DAC80501 (16 bit, SPI) op SPID (aantal: DAC_AANTAL)
  *
  * Pinnen:
- *   PC7 = SCLK  (beide DAC's)
- *   PC5 = SDIN  (beide DAC's)
- *   PC4 = SYNC  van DAC 1  (dit is de SS-pin van SPIC, hier als gewone GPIO gebruikt)
- *   PF4 = SYNC  van DAC 2
- *   PC6 = MISO, niet gebruikt (de DAC80501 heeft geen SDO)
+ *   PD7 = SCLK  (alle DAC's)
+ *   PD5 = SDIN  (alle DAC's)
+ *   PD4 = SYNC  van DAC 1  (dit is de SS-pin van SPID, hier als gewone GPIO gebruikt)
+ *   PF4 = SYNC  van DAC 2 (alleen bij DAC_AANTAL 2)
+ *   PD6 = MISO, niet gebruikt (de DAC80501 heeft geen SDO)
  * Hardware: SPI2C-pin van elke DAC naar GND (= SPI-mode), pull-up op SYNC.
  *
  * Frame van 24 bit: SYNC laag, 8 bit registeradres + 16 bit data, SYNC hoog.
@@ -21,13 +21,13 @@
 #include <stdint.h>
 
 /* ---------- pinnen: hier aanpassen ---------- */
-#define DAC_SPI           SPIC
-#define DAC_SPI_PORT      PORTC
-#define DAC_SCK_bm        PIN7_bm     // PC7
-#define DAC_MOSI_bm       PIN5_bm     // PC5
+#define DAC_SPI           SPID
+#define DAC_SPI_PORT      PORTD
+#define DAC_SCK_bm        PIN7_bm     // PD7
+#define DAC_MOSI_bm       PIN5_bm     // PD5
 
-#define DAC1_SYNC_PORT    PORTC
-#define DAC1_SYNC_bm      PIN4_bm     // PC4
+#define DAC1_SYNC_PORT    PORTD
+#define DAC1_SYNC_bm      PIN4_bm     // PD4
 #define DAC2_SYNC_PORT    PORTF
 #define DAC2_SYNC_bm      PIN4_bm     // PF4
 
@@ -46,7 +46,12 @@
 #define DAC_REG_DATA      0x08
 #define DAC_GAIN_WAARDE   ((uint16_t)((((DAC_REF_DIV) & 1) << 8) | ((DAC_BUFF_GAIN) & 1)))
 
-#define DAC_AANTAL        2
+/* Aantal aangesloten DAC's: 1 of 2 (ook te zetten met -DDAC_AANTAL=2).
+ *   1 -> alleen DAC 1 (SYNC = PD4). PF4 wordt niet aangeraakt.
+ *   2 -> ook DAC 2 (SYNC = PF4). */
+#ifndef DAC_AANTAL
+#define DAC_AANTAL        1
+#endif
 #define DAC_EXT1          0
 #define DAC_EXT2          1
 
@@ -66,14 +71,22 @@ DAC_INLINE void dac_spi_byte(uint8_t b)
 
 DAC_INLINE void dac_sync_laag(uint8_t dac)
 {
-    if (dac == DAC_EXT1) DAC1_SYNC_PORT.OUTCLR = DAC1_SYNC_bm;
-    else                 DAC2_SYNC_PORT.OUTCLR = DAC2_SYNC_bm;
+#if DAC_AANTAL > 1
+    if (dac != DAC_EXT1) { DAC2_SYNC_PORT.OUTCLR = DAC2_SYNC_bm; return; }
+#else
+    (void)dac;
+#endif
+    DAC1_SYNC_PORT.OUTCLR = DAC1_SYNC_bm;
 }
 
 DAC_INLINE void dac_sync_hoog(uint8_t dac)
 {
-    if (dac == DAC_EXT1) DAC1_SYNC_PORT.OUTSET = DAC1_SYNC_bm;
-    else                 DAC2_SYNC_PORT.OUTSET = DAC2_SYNC_bm;
+#if DAC_AANTAL > 1
+    if (dac != DAC_EXT1) { DAC2_SYNC_PORT.OUTSET = DAC2_SYNC_bm; return; }
+#else
+    (void)dac;
+#endif
+    DAC1_SYNC_PORT.OUTSET = DAC1_SYNC_bm;
 }
 
 /*! \brief Eén register schrijven (24-bit frame) */

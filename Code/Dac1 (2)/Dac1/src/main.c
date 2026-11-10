@@ -1,12 +1,14 @@
 /*!
  * \file    main.c
- * \brief   Toetsen + ADC + serieel, met 2 VCO's op twee externe DAC80501 (SPI)
+ * \brief   Toetsen + ADC + serieel, met VCO('s) op één of twee externe DAC80501 (SPI)
  *          en een gate voor de envelope generator
  *
  * Toets ingedrukt -> frequentie uit frequentie_centihz() gaat naar beide VCO's.
- *   VCO 1 -> DAC 1 (SYNC = PC4),  VCO 2 -> DAC 2 (SYNC = PF4),  SCLK = PC7, SDIN = PC5
+ *   VCO 1 -> DAC 1 (SYNC = PD4),  VCO 2 -> DAC 2 (SYNC = PF4),  SCLK = PD7, SDIN = PD5
+ *   Nu staat DAC_AANTAL (dac80501.h) op 1: alleen VCO 1 -> DAC 1. VCO 2 / DAC 2 doet dan niet mee.
  * Gate voor de envelope generator (zie envelope.h): hoog zolang er minstens een toets ingedrukt is.
  * Golfvorm kiezen: zie VCO1_GOLF en VCO2_GOLF.
+ * Frequentie intypen: typ in de seriële terminal bijvoorbeeld 440 of 261.63 + Enter (zie freq_input.h).
  */
 
 #define F_CPU 32000000UL               // vóór de includes, één keer (klok gaat naar 32 MHz)
@@ -25,16 +27,22 @@
 #include "frequentie.h"
 #include "dac80501.h"
 #include "envelope.h"
+#include "freq_input.h"
 
 #define TICK_MS             10      // lusduur: toetsen worden elke 10 ms gepolld
-#define ADC_PERIODE_TICKS   20      // ADC elke 20 ticks = 200 ms
+#define ADC_PERIODE_TICKS   15      // ADC elke 20 ticks = 200 ms
 
 // Samplefrequentie van de VCO's. Per sample gaan er twee SPI-frames van 24 bit over de bus
 // (3 us) en de ISR zelf kost ongeveer 9 us (geschat uit de assembly, niet gemeten).
 // Bij 100 kHz is de CPU dan bijna vol (10 us per sample); 50 kHz laat de hoofdlus ruim genoeg tijd.
-#define FS 50000UL
+// (Dat geldt voor 2 DAC's. Bij DAC_AANTAL 1 gaat er één frame over de bus en wordt maar één VCO berekend.)
+#define FS 90000UL
 
-// Golfvorm per VCO
+// 1 = lineair interpoleren tussen twee tabelpunten (veel schoner signaal, kost per DAC ongeveer 1-2 us
+//     extra in de ISR, niet gemeten); 0 = gewoon het dichtstbijzijnde tabelpunt (blokkerig, ~37 dB SNR)
+#define VCO_INTERPOLATIE 1
+
+// Golfvorm per VCO: GOLF_SINUS, GOLF_BLOK, GOLF_ZAAGTAND of GOLF_DRIEHOEK
 #define VCO1_GOLF       GOLF_SINUS
 #define VCO2_GOLF       GOLF_ZAAGTAND
 
@@ -49,11 +57,27 @@ static uint32_t                   vco_phase[2];  // alleen de ISR schrijft hieri
 static volatile uint32_t          vco_step[2];
 static const uint16_t * volatile  vco_lut[2];
 
+// Tabelwaarde bij een 32-bit fase: bovenste 8 bit = tabelindex, de 8 bit daaronder = fractie
+static inline uint16_t lut_waarde(const uint16_t *lut, uint32_t phase) {
+#if VCO_INTERPOLATIE
+    uint8_t  i  = (uint8_t)(phase >> 24);
+    uint8_t  fr = (uint8_t)(phase >> 16);
+    uint16_t a  = lut[i];
+    uint16_t b  = lut[(uint8_t)(i + 1)];            // na punt 255 weer naar punt 0
+    int32_t  d  = (int32_t)b - (int32_t)a;
+    return (uint16_t)(a + ((d * fr) >> 8));
+#else
+    return lut[phase >> 24];
+#endif
+}
+
 ISR(TCC0_OVF_vect) {
     vco_phase[0] += vco_step[0];
+    dac80501_write(DAC_EXT1, lut_waarde(vco_lut[0], vco_phase[0]));
+#if DAC_AANTAL > 1
     vco_phase[1] += vco_step[1];
-    dac80501_write(DAC_EXT1, vco_lut[0][vco_phase[0] >> 24]);
-    dac80501_write(DAC_EXT2, vco_lut[1][vco_phase[1] >> 24]);
+    dac80501_write(DAC_EXT2, lut_waarde(vco_lut[1], vco_phase[1]));
+#endif
 }
 
 // frequentie in centi-Hz (zoals frequentie_centihz() levert); VCO 2 volgt VCO 1 met VCO2_RATIO_Q8
@@ -66,6 +90,17 @@ static void setFreq_centihz(uint32_t f_centi) {
 // golfvorm van een VCO wisselen (vco = 0 of 1)
 static void vco_set_golf(uint8_t vco, golf_t golf) {
     ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { vco_lut[vco] = golf_tabel[golf]; }
+}
+
+// Een via de seriële poort ingetypte frequentie (bijvoorbeeld "440" + Enter) meteen toepassen
+static void serieel_frequentie(void) {
+    uint32_t f;
+    if (freq_input_poll(&f)) {
+        setFreq_centihz(f);
+        printf("\nFrequentie: %lu.%02lu Hz\n",
+               (unsigned long)(f / 100),
+               (unsigned long)(f % 100));
+    }
 }
 
 static void klok_32mhz(void) {
@@ -103,7 +138,7 @@ int main(void)
     adc_init();
     toetsen_init();
     envelope_init();           // gate-pinnen: gate laag, !gate hoog
-    dac80501_init();           // SPIC + beide DAC's instellen
+    dac80501_init();           // SPID + de DAC('s) instellen (DAC_AANTAL)
     golf_init();               // tabellen + sampleklok (de ISR schrijft naar de DAC's)
     setFreq_centihz(100000UL);
     sei();
@@ -141,8 +176,13 @@ int main(void)
             adc_meting_t m = adc_meet();
             printf("res:%5d  procent:%3d%%  procent2:%3d%%\n",
                    m.res, m.procent, m.procent2);
+            freq_input_debug();
         }
 
-        _delay_ms(TICK_MS);
+        // TICK_MS wachten, maar elke ms kijken of er een frequentie is ingetypt
+        for (uint8_t t = 0; t < TICK_MS; t++) {
+            _delay_ms(1);
+            serieel_frequentie();
+        }
     }
 }
