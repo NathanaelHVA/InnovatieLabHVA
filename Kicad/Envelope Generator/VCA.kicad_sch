@@ -499,6 +499,289 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Audio:AudioJack3_SwitchTR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AudioJack3_SwitchTR"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Audio Jack, 3 Poles (Stereo / TRS), Switched TR Poles (Normalling)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "audio jack receptacle stereo headphones phones TRS connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Jack*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AudioJack3_SwitchTR_0_1"
+				(rectangle
+					(start -5.08 -5.08)
+					(end -6.35 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -5.08) (xy -1.27 -5.715) (xy -0.635 -5.08) (xy -0.635 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -5.08) (xy 0.635 -5.715) (xy 1.27 -5.08) (xy 2.54 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -0.254) (xy 0.762 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 -5.334) (xy 2.032 -5.842)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.54 3.81)
+					(end -5.08 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy -2.54 2.54) (xy -2.54 -5.08) (xy -3.175 -5.715) (xy -3.81 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 0.508 -2.54) (xy 0.508 -0.254) (xy 0.254 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -7.62) (xy 1.778 -7.62) (xy 1.778 -5.334) (xy 1.524 -5.842)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AudioJack3_SwitchTR_1_1"
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "R"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "RN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "T"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "TN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -1473,6 +1756,14 @@
 		(color 0 0 0 0)
 		(uuid "f14c1d9d-ae95-43f7-b6e2-b37fcd7fdaea")
 	)
+	(no_connect
+		(at 186.69 92.71)
+		(uuid "7dab3cbf-be43-4cdb-9306-a5b4f9f057ee")
+	)
+	(no_connect
+		(at 186.69 97.79)
+		(uuid "dfc2cb07-0a30-497e-b59b-7031a4db5e34")
+	)
 	(wire
 		(pts
 			(xy 85.09 96.52) (xy 85.09 109.22)
@@ -1492,6 +1783,16 @@
 			(type default)
 		)
 		(uuid "0ac6c39b-9115-463c-8f94-13f8c76b5d53")
+	)
+	(wire
+		(pts
+			(xy 186.69 87.63) (xy 194.31 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14974aea-3ae8-4fe6-8f8d-6b164640ce11")
 	)
 	(wire
 		(pts
@@ -1652,6 +1953,16 @@
 			(type default)
 		)
 		(uuid "6dc36a50-c8ab-40b5-a21c-aef467c9a845")
+	)
+	(wire
+		(pts
+			(xy 187.96 90.17) (xy 186.69 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fecbf00-9fd8-4e10-9d76-9c8e3fb08b6e")
 	)
 	(wire
 		(pts
@@ -1935,6 +2246,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 95.25) (xy 187.96 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3833fb5-0d38-4c42-98ac-01f9724a42a9")
+	)
+	(wire
+		(pts
 			(xy 76.2 123.19) (xy 76.2 124.46)
 		)
 		(stroke
@@ -2004,6 +2325,16 @@
 		(uuid "0a41bf71-092c-41aa-a875-c2f44952e0bd")
 	)
 	(label "Vout"
+		(at 187.96 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13ebff87-8af2-46fb-8e47-4bc38ea50dcb")
+	)
+	(label "Vout"
 		(at 113.03 175.26 0)
 		(effects
 			(font
@@ -2042,6 +2373,16 @@
 			(justify right bottom)
 		)
 		(uuid "af1d5410-574f-4fea-8e1b-75e24b06d7c3")
+	)
+	(label "Vout"
+		(at 187.96 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b16bdfa5-847c-470e-9492-05a5a8764dc8")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2603,28 +2944,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "0e7e6f32-8408-4d9b-a12c-bd2b0abf9a68")
+			(uuid "0e7e6f32-8408-4d9b-a12c-bd2b0abf9a69")
 		)
 		(pin "2"
-			(uuid "f0c8f6b1-03ad-47ec-8fe9-42dcd18abd3d")
+			(uuid "f0c8f6b1-03ad-47ec-8fe9-42dcd18abd3e")
 		)
 		(pin "8"
-			(uuid "2ecd4794-cc91-4e12-926b-aafef3316d59")
+			(uuid "2ecd4794-cc91-4e12-926b-aafef3316d5a")
 		)
 		(pin "3"
-			(uuid "a9ca88e8-4565-4e92-8bb7-84fa6b256a0e")
+			(uuid "a9ca88e8-4565-4e92-8bb7-84fa6b256a0f")
 		)
 		(pin "4"
-			(uuid "e3426e68-b73b-44a4-ba36-eba4b4888a0c")
+			(uuid "e3426e68-b73b-44a4-ba36-eba4b4888a0d")
 		)
 		(pin "7"
-			(uuid "7548ddc7-b40e-443d-96c2-3a6bc181b88f")
+			(uuid "7548ddc7-b40e-443d-96c2-3a6bc181b890")
 		)
 		(pin "5"
-			(uuid "bc036349-a1ff-49dd-9a4c-a7e4c6bd58e0")
+			(uuid "bc036349-a1ff-49dd-9a4c-a7e4c6bd58e1")
 		)
 		(pin "1"
-			(uuid "305792ec-714d-4dbd-91f6-8b3acaeaccab")
+			(uuid "305792ec-714d-4dbd-91f6-8b3acaeaccac")
 		)
 		(instances
 			(project "Envelope Generator"
@@ -3210,28 +3551,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "0e7e6f32-8408-4d9b-a12c-bd2b0abf9a68")
+			(uuid "0e7e6f32-8408-4d9b-a12c-bd2b0abf9a6a")
 		)
 		(pin "2"
-			(uuid "f0c8f6b1-03ad-47ec-8fe9-42dcd18abd3d")
+			(uuid "f0c8f6b1-03ad-47ec-8fe9-42dcd18abd3f")
 		)
 		(pin "8"
-			(uuid "2ecd4794-cc91-4e12-926b-aafef3316d59")
+			(uuid "2ecd4794-cc91-4e12-926b-aafef3316d5b")
 		)
 		(pin "3"
-			(uuid "a9ca88e8-4565-4e92-8bb7-84fa6b256a0e")
+			(uuid "a9ca88e8-4565-4e92-8bb7-84fa6b256a10")
 		)
 		(pin "4"
-			(uuid "e3426e68-b73b-44a4-ba36-eba4b4888a0c")
+			(uuid "e3426e68-b73b-44a4-ba36-eba4b4888a0e")
 		)
 		(pin "7"
-			(uuid "7548ddc7-b40e-443d-96c2-3a6bc181b88f")
+			(uuid "7548ddc7-b40e-443d-96c2-3a6bc181b891")
 		)
 		(pin "5"
-			(uuid "bc036349-a1ff-49dd-9a4c-a7e4c6bd58e0")
+			(uuid "bc036349-a1ff-49dd-9a4c-a7e4c6bd58e2")
 		)
 		(pin "1"
-			(uuid "305792ec-714d-4dbd-91f6-8b3acaeaccab")
+			(uuid "305792ec-714d-4dbd-91f6-8b3acaeaccad")
 		)
 		(instances
 			(project "Envelope Generator"
@@ -4262,6 +4603,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Audio:AudioJack3_SwitchTR")
+		(at 181.61 90.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3f5f65d-48b1-4f1b-b502-e86300686780")
+		(property "Reference" "J8"
+			(at 179.705 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AudioJack3_SwitchTR"
+			(at 179.705 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Audio:Jack_3.5mm_CUI_SJ1-3525N_Horizontal"
+			(at 181.61 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Audio Jack, 3 Poles (Stereo / TRS), Switched TR Poles (Normalling)"
+			(at 181.61 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "TN"
+			(uuid "8b716beb-e0b0-4973-8ed5-7795aa9e042f")
+		)
+		(pin "R"
+			(uuid "87c83cce-a333-43de-9df2-452eb5d7fe40")
+		)
+		(pin "S"
+			(uuid "0c909b1b-588a-44db-aecb-b861d800467f")
+		)
+		(pin "RN"
+			(uuid "eeea1304-b7ec-4a17-b7d1-54efc0fa14f4")
+		)
+		(pin "T"
+			(uuid "2096b261-ba84-43ba-97b5-f7cf20d9e509")
+		)
+		(instances
+			(project "Envelope Generator"
+				(path "/840c554b-c3b1-4089-b3af-0632f10419a5/60fb3241-5676-4df1-b900-d1a0140aedee"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 68.58 114.3 90)
 		(unit 1)
@@ -4445,6 +4875,84 @@
 			(project "Envelope Generator"
 				(path "/840c554b-c3b1-4089-b3af-0632f10419a5/60fb3241-5676-4df1-b900-d1a0140aedee"
 					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 194.31 87.63 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ebe711ff-0815-49d2-87ae-cf1815da9b40")
+		(property "Reference" "#PWR021"
+			(at 194.31 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 194.31 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 194.31 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 194.31 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8209dbda-4935-4761-b598-565ca419f8a5")
+		)
+		(instances
+			(project "Envelope Generator"
+				(path "/840c554b-c3b1-4089-b3af-0632f10419a5/60fb3241-5676-4df1-b900-d1a0140aedee"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
