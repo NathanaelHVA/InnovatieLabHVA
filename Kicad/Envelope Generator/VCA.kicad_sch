@@ -3109,7 +3109,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "100nF"
 			(at 218.44 39.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
