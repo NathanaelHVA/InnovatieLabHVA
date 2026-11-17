@@ -5,45 +5,35 @@
 #define OCTAAF_PORT     PORTB
 #define OCTAAF_PIN_bm   PIN4_bm
 #define OCTAAF_PINCTRL  PIN4CTRL
-#define OCTAAF_BIT      12     
-
-#define TOETS10_BIT     10
-#define TOETS10_PORT    PORTC
-#define TOETS10_PIN_bm  PIN0_bm
-#define TOETS10_PINCTRL PIN0CTRL
+#define OCTAAF_BIT      12      // plek in de samengestelde toestand
 
 static uint8_t  octaaf         = 0;
-static uint16_t vorige_sample  = 0; 
-static uint16_t vorige_stabiel = 0;   
+static uint16_t vorige_sample  = 0;   // meting van de vorige poll
+static uint16_t vorige_stabiel = 0;   // laatst geaccepteerde (stabiele) status
 
 void toetsen_init(void)
 {
     PORTA.DIRCLR = 0xFF;                 // PA0..PA7 als ingang
-    PORTB.DIRCLR = 0x0B;                 // PB0, PB1, PB3 als ingang (PB2 = DAC)
-    TOETS10_PORT.DIRCLR = TOETS10_PIN_bm;// PC0 als ingang
+    PORTB.DIRCLR = 0x0F;                 // PB0..PB3 als ingang
     OCTAAF_PORT.DIRCLR = OCTAAF_PIN_bm;  // PB4 als ingang
 
     // Interne pull-downs
     for (uint8_t i = 0; i < 8; i++)
         (&PORTA.PIN0CTRL)[i] = PORT_OPC_PULLDOWN_gc;
     for (uint8_t i = 0; i < 4; i++)
-        if (i != 2)                      // PB2 overslaan, die is de DAC-uitgang
-            (&PORTB.PIN0CTRL)[i] = PORT_OPC_PULLDOWN_gc;
-    TOETS10_PORT.TOETS10_PINCTRL = PORT_OPC_PULLDOWN_gc;
+        (&PORTB.PIN0CTRL)[i] = PORT_OPC_PULLDOWN_gc;
     OCTAAF_PORT.OCTAAF_PINCTRL = PORT_OPC_PULLDOWN_gc;
 }
 
 // Alle knoppen in één 16-bit waarde:
-// bit 0..7 = PA0..PA7, bit 8, 9, 11 = PB0, PB1, PB3,
-// bit 10 = PC0 (toets 10), bit 12 = octaafknop
+// bit 0..7 = PA0..PA7, bit 8..11 = PB0..PB3, bit 12 = octaafknop
 static uint16_t lees_knoppen(void)
 {
-    uint16_t a   = PORTA.IN;
-    uint16_t b   = PORTB.IN & 0x0B;      // PB0, PB1, PB3 -> bit 8, 9, 11
-    uint16_t t10 = (TOETS10_PORT.IN & TOETS10_PIN_bm) ? 1U : 0U;
-    uint16_t o   = (OCTAAF_PORT.IN & OCTAAF_PIN_bm) ? 1U : 0U;
+    uint16_t a = PORTA.IN;
+    uint16_t b = PORTB.IN & 0x0F;
+    uint16_t o = (OCTAAF_PORT.IN & OCTAAF_PIN_bm) ? 1U : 0U;
 
-    return a | (b << 8) | (t10 << TOETS10_BIT) | (o << OCTAAF_BIT);
+    return a | (b << 8) | (o << OCTAAF_BIT);
 }
 
 toetsen_event_t toetsen_poll(void)
@@ -76,14 +66,10 @@ uint8_t toetsen_octaaf(void)
 
 char toetsen_poort(uint8_t toets)
 {
-    if (toets < 8)             return 'A';
-    if (toets == TOETS10_BIT)  return 'C';
-    return 'B';
+    return (toets < 8) ? 'A' : 'B';
 }
 
 uint8_t toetsen_pin(uint8_t toets)
 {
-    if (toets < 8)             return toets;
-    if (toets == TOETS10_BIT)  return 0;
-    return toets - 8;
+    return (toets < 8) ? toets : toets - 8;
 }
