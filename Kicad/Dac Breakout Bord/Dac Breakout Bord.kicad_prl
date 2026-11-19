@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 1,
+    "active_layer": 25,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
@@ -33,6 +33,7 @@
       "vias",
       "footprint_text",
       "footprint_anchors",
+      "ratsnest",
       "grid",
       "footprints_front",
       "footprints_back",
@@ -60,7 +61,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Nathanael den Hertog Dac Breakoutbord.kicad_prl",
+    "filename": "Dac Breakout Bord.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
