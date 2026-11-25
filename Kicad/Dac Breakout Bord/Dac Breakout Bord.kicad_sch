@@ -1225,16 +1225,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 102.87) (xy 53.34 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47ec6a6e-1c02-4c1f-824e-23c119c5d86c")
-	)
-	(wire
-		(pts
 			(xy 49.53 127) (xy 49.53 129.54)
 		)
 		(stroke
@@ -1272,16 +1262,6 @@
 			(type default)
 		)
 		(uuid "5c94facc-72cb-4a5b-8d53-b50013d2fd20")
-	)
-	(wire
-		(pts
-			(xy 53.34 96.52) (xy 53.34 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "692885a3-e9f1-4a2b-be3d-38a5753019ff")
 	)
 	(wire
 		(pts
@@ -1355,13 +1335,13 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 55.88) (xy 46.99 55.88)
+			(xy 46.99 58.42) (xy 46.99 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9b54d08b-87c5-4671-b8a7-de950d0a425c")
+		(uuid "8fbc7f19-7401-41e5-a803-1d87ecdef6eb")
 	)
 	(wire
 		(pts
@@ -1601,9 +1581,86 @@
 			(uuid "4d0e566a-7d8f-470a-bf10-7e9721530784")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 46.99 58.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "10e84afb-dac0-42a5-9a88-4f24a9a8b0d7")
+		(property "Reference" "#PWR011"
+			(at 46.99 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 47.498 63.754 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.99 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 46.99 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0732948d-aa0f-4a98-a065-c38bac520368")
+		)
+		(instances
+			(project "Dac Breakout Bord"
+				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -1678,7 +1735,7 @@
 			(uuid "5e05fa61-477e-41a9-ac1c-56db12bdd519")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR08")
 					(unit 1)
@@ -1756,7 +1813,7 @@
 			(uuid "2ed0c72a-a5d6-42d4-ae7f-1234b7a0fd3f")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR03")
 					(unit 1)
@@ -1834,9 +1891,86 @@
 			(uuid "7c55e8bb-c70b-4cd6-b928-fe627f3e9d95")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 53.34 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "56e2a239-a438-41b2-9771-c820afa6943a")
+		(property "Reference" "#PWR012"
+			(at 53.34 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 53.848 101.854 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 53.34 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dbe91800-1cde-4cb4-901f-b1de6400c04c")
+		)
+		(instances
+			(project "Dac Breakout Bord"
+				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -1912,7 +2046,7 @@
 			(uuid "50aa2527-74e6-4fe0-b6f1-9d760696a5ba")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR02")
 					(unit 1)
@@ -2021,7 +2155,7 @@
 			(uuid "ef34c683-e3f7-4077-b7f0-f3764b16302f")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "U1")
 					(unit 1)
@@ -2103,7 +2237,7 @@
 			(uuid "1600e7d9-ce17-4592-82b3-3407f1836408")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "C4")
 					(unit 1)
@@ -2185,7 +2319,7 @@
 			(uuid "6fa09dd9-d857-41d7-b02b-b90712ae2145")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "R3")
 					(unit 1)
@@ -2263,7 +2397,7 @@
 			(uuid "c0e585af-5eb5-4dec-ab79-dc52855464fa")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR01")
 					(unit 1)
@@ -2345,7 +2479,7 @@
 			(uuid "0735bdc5-5f4a-4547-9af9-bf07ca404bb2")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "C2")
 					(unit 1)
@@ -2427,7 +2561,7 @@
 			(uuid "2106cfcc-4237-4243-b9e1-7c5e39fc66ee")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "R2")
 					(unit 1)
@@ -2509,7 +2643,7 @@
 			(uuid "fa8485d5-f6e1-4ed2-be84-d340a1a18934")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "R4")
 					(unit 1)
@@ -2595,7 +2729,7 @@
 			(uuid "0379fa5d-b96f-4525-b894-765784a23e63")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "J2")
 					(unit 1)
@@ -2675,7 +2809,7 @@
 			(uuid "1752413d-09c0-4fbc-8220-1aeb0522089f")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "C3")
 					(unit 1)
@@ -2752,87 +2886,9 @@
 			(uuid "04ef1be5-a0ab-468e-be88-143cfca25235")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 43.18 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ba572b7a-624d-4b58-ba59-df40320b918e")
-		(property "Reference" "#PWR06"
-			(at 43.18 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 43.18 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 43.18 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3dfc0bd9-54c5-40d6-906c-5090df09fb46")
-		)
-		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
-				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -2908,7 +2964,7 @@
 			(uuid "ea4de6e7-8644-4d9d-84aa-ca016df7927b")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR010")
 					(unit 1)
@@ -2986,7 +3042,7 @@
 			(uuid "1df5f125-975c-4867-85f6-42bdd678cc03")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR07")
 					(unit 1)
@@ -3067,7 +3123,7 @@
 			(uuid "20cf8f24-0a76-44da-8750-a69c2978080c")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "C5")
 					(unit 1)
@@ -3149,87 +3205,9 @@
 			(uuid "140fa33a-87e1-47f4-a11e-9fd0cc090f30")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 55.88 102.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e6b96eff-de21-45cb-b27a-129c5041104c")
-		(property "Reference" "#PWR011"
-			(at 55.88 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 55.88 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 55.88 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 55.88 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 55.88 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1521e258-3629-44ff-b34d-b1fc5227924f")
-		)
-		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
-				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
-					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -3305,7 +3283,7 @@
 			(uuid "9ab85aaa-9e66-44a5-9d36-2a8b8e719e9b")
 		)
 		(instances
-			(project "Nathanael den Hertog Dac Breakoutbord"
+			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "#PWR04")
 					(unit 1)
