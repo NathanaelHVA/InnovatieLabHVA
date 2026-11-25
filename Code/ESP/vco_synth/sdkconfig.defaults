@@ -1,0 +1,20 @@
+# Wordt alleen gebruikt als er nog geen sdkconfig is (verwijder sdkconfig om opnieuw te laden)
+
+# CPU op 240 MHz (standaard 160 MHz)
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# Optimaliseren op snelheid (-O2) i.p.v. debug (-Og)
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# 1 ms tick
+CONFIG_FREERTOS_HZ=1000
+
+# Core 1 is helemaal voor de sample-taak; de idle-taak daar komt nooit aan de beurt.
+# Zonder deze regel klaagt de task watchdog elke 5 s over "IDLE1".
+# CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1 is not set
+
+# app_main tekent ook het scherm: wat meer stack
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+# ESP32-S3 N16R8: 16 MB flash
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y

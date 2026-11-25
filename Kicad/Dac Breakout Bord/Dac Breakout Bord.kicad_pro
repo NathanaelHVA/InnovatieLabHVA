@@ -693,7 +693,7 @@
         "uuid": "de810374-9bc8-4923-8e3b-882be4496c1b"
       }
     ],
-    "used_designators": "#PWR1-11,C1-5,J1-2,R1-5,U1-4",
+    "used_designators": "#PWR1-12,C1-5,J1-2,R1-5,U1-4",
     "variants": [
       {
         "name": "dac 1"
