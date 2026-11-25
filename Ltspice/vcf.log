@@ -1,0 +1,35 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\InnovatieLabHVA\Ltspice\vcf.net
+Start Time: Tue Nov 24 12:08:19 2026
+solver = Normal
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration for .op point succeeded.
+.step rq=10
+.step rq=15.8489319246111
+.step rq=25.1188643150958
+.step rq=39.8107170553497
+.step rq=63.0957344480193
+.step rq=100
+.step rq=158.489319246111
+.step rq=251.188643150958
+.step rq=398.107170553497
+.step rq=630.957344480194
+.step rq=1000
+.step rq=1584.89319246111
+.step rq=2511.88643150958
+.step rq=3981.07170553498
+.step rq=6309.57344480194
+.step rq=10000
+.step rq=15848.9319246112
+.step rq=25118.8643150958
+.step rq=39810.7170553498
+.step rq=50000
+Total elapsed time: 0.304 seconds.
+
+Files loaded:
+C:\InnovatieLabHVA\Ltspice\vcf.net
+C:\Users\Natha\AppData\Local\LTspice\lib\sub\UniversalOpAmp1.lib
+

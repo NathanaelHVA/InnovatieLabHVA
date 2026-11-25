@@ -1,0 +1,15 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\InnovatieLabHVA\Ltspice\Sumup schakeling.net
+Start Time: Tue Nov 24 11:28:15 2026
+solver = Normal
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.049 seconds.
+
+Files loaded:
+C:\InnovatieLabHVA\Ltspice\Sumup schakeling.net
+C:\Users\Natha\AppData\Local\LTspice\lib\sub\UniversalOpAmp2.lib
+
