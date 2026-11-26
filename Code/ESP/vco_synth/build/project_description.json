@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "vco_synth",
-    "project_version":    "83ae8f7-dirty",
+    "project_version":    "1b152de-dirty",
     "project_path":       "C:/InnovatieLabHVA/Code/ESP/vco_synth",
     "idf_path":           "C:/Users/Natha/esp/v5.5.2/esp-idf",
     "build_dir":          "C:/InnovatieLabHVA/Code/ESP/vco_synth/build",
@@ -1225,7 +1225,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/InnovatieLabHVA/Code/ESP/vco_synth/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/main.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/dac80501.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/freq_input.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/vco_ui.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/toetsen.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/adc.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/frequentie.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/ucglib_esp32.c" ],
+            "sources": [ "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/main.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/dac80501.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/freq_input.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/vco_ui.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/toetsen.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/adc.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/frequentie.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/ucglib_esp32.c", "C:/InnovatieLabHVA/Code/ESP/vco_synth/main/liedje.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

@@ -6,7 +6,7 @@ DAC'S (2x DAC80501)
  
 GPIO48   SCLK, naar DAC 1 en DAC 2
 GPIO47   SDIN DAC 1
-GPIO0    SDIN DAC 2, niet op BOOT drukken tijdens het spelen
+GPIO4    SDIN DAC 2
 GPIO21   SYNC, naar DAC 1 en DAC 2
 3V3      VDD van beide DAC's
 GND      GND en SPI2C van beide DAC's
@@ -14,7 +14,8 @@ GND      GND en SPI2C van beide DAC's
  
 GATE
  
-GPIO4    gate naar de envelope generator, hoog zolang er een toets is ingedrukt
+GPIO1    gate naar de envelope generator, hoog zolang er een toets is ingedrukt
+GPIO2    omgekeerde gate, laag zolang er een toets is ingedrukt
  
  
 SCHERM (ST7735)
@@ -49,7 +50,6 @@ KNOPPEN
 GPIO15   octaaf
 GPIO7    golfvorm VCO 1
 GPIO6    golfvorm VCO 2
-GPIO1    reserve
  
  
 POTMETER

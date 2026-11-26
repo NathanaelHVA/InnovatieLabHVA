@@ -1,6 +1,6 @@
 LTspice 24.1.10 for Windows
-Circuit: C:\Users\tim_s\Documents\GitHub\InnovatieLabHVA\Ltspice\Draft1.net
-Start Time: Fri Nov 20 13:14:45 2026
+Circuit: C:\InnovatieLabHVA\Ltspice\Draft1.net
+Start Time: Thu Nov 26 11:33:22 2026
 solver = Normal
 Maximum thread count: 22
 tnom = 27
@@ -10,6 +10,6 @@ Direct Newton iteration for .op point succeeded.
 Total elapsed time: 0.069 seconds.
 
 Files loaded:
-C:\Users\tim_s\Documents\GitHub\InnovatieLabHVA\Ltspice\Draft1.net
-C:\Users\tim_s\AppData\Local\LTspice\lib\sub\UniversalOpAmp2.lib
+C:\InnovatieLabHVA\Ltspice\Draft1.net
+C:\Users\Natha\AppData\Local\LTspice\lib\sub\UniversalOpAmp1.lib
 

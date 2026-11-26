@@ -12,12 +12,13 @@
 /* ---------- 2x DAC80501 (SPI via dedicated GPIO, core 1) ---------- */
 #define DAC_PIN_SCLK     48      // SCLK van DAC 1 en DAC 2
 #define DAC_PIN_SDIN1    47      // SDIN van DAC 1
-#define DAC_PIN_SDIN2     0      // SDIN van DAC 2 (= BOOT-pin: niet op BOOT drukken tijdens het spelen)
+#define DAC_PIN_SDIN2     4      // SDIN van DAC 2 (was GPIO0, de BOOT-pin)
 #define DAC_PIN_SYNC     21      // SYNC van DAC 1 en DAC 2
 //                                  VDD -> 3V3, GND -> GND, SPI2C -> GND
 
 /* ---------- gate voor de envelope generator ---------- */
-#define GATE_PIN          4      // hoog zolang er een toets is ingedrukt (zie GATE_VAN_TOETSEN in main.c)
+#define GATE_PIN          1      // hoog zolang er een toets is ingedrukt (zie GATE_VAN_TOETSEN in main.c)
+#define GATE_INV_PIN      2      // omgekeerde gate: laag zolang er een toets is ingedrukt
 
 /* ---------- TFT ST7735 (128x160) ---------- */
 #define TFT_PIN_SCK      42      // SCK
@@ -45,7 +46,6 @@
 #define OCTAAF_GPIO      15      // octaafknop
 #define GOLF_VCO1_GPIO    7      // golfvorm VCO 1 wisselen
 #define GOLF_VCO2_GPIO    6      // golfvorm VCO 2 wisselen
-#define RESERVE_GPIO      1      // reserveknop (doet nog niks, print alleen een melding)
 
 /* ---------- potmeter ---------- */
 #define POT_GPIO          5      // loper; uiteinden naar 3V3 en GND (GPIO5 = ADC1 kanaal 4)

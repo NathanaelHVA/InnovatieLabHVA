@@ -11,7 +11,6 @@ typedef struct {
     uint16_t toetsen;           // bit i = toets i zojuist ingedrukt
     uint8_t  octaaf;            // 1 = octaafknop zojuist ingedrukt
     uint8_t  golf;              // bit 0 = golfknop VCO 1, bit 1 = golfknop VCO 2 zojuist ingedrukt
-    uint8_t  reserve;           // 1 = reserveknop zojuist ingedrukt
 } toetsen_event_t;
 
 void            toetsen_init(void);

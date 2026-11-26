@@ -5,6 +5,8 @@
  *   440     + Enter  -> frequentie 440 Hz         (FREQ_INPUT_FREQ,   waarde in centi-Hz)
  *   261.63  + Enter  -> frequentie 261,63 Hz
  *   v50     + Enter  -> volume 50 %, v0 .. v100   (FREQ_INPUT_VOLUME, waarde in procent)
+ *   j       + Enter  -> Vader Jakob aan/uit       (FREQ_INPUT_LIEDJE, waarde 'j')
+ *   p       + Enter  -> He's a Pirate aan/uit     (FREQ_INPUT_LIEDJE, waarde 'p')
  *
  * Leest via stdin, dus het werkt op de console-poort die ESP-IDF gebruikt
  * (UART- of USB-poort van het board, wat je in idf.py monitor open hebt).
@@ -24,6 +26,7 @@
 #define FREQ_INPUT_NIETS         0          // nog geen complete regel
 #define FREQ_INPUT_FREQ          1          // *waarde = frequentie in centi-Hz
 #define FREQ_INPUT_VOLUME        2          // *waarde = volume in procent (0..100)
+#define FREQ_INPUT_LIEDJE        3          // j of p + Enter: liedje aan/uit, *waarde = 'j' of 'p'
 
 // Eén teken uit stdin, of FREQ_RX_GEEN als er niks is (ESP-IDF leest standaard niet-blokkerend)
 #define FREQ_RX_GEEN             0x100u

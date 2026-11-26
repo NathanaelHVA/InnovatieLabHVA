@@ -1,6 +1,6 @@
 {
     "idf.currentSetup": "C:\\Users\\Natha\\esp\\v5.5.2\\esp-idf",
-    "idf.port": "COM20",
+    "idf.port": "COM19",
     "idf.flashType": "UART",
     "idf.openOcdConfigs": [
         "board/esp32s3-builtin.cfg"

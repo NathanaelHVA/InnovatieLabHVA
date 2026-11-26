@@ -14,6 +14,8 @@
  *   - golfvormknop VCO 1/2  : sinus -> blok -> driehoek -> zaagtand -> sinus ...
  *   - potmeter              : volume verdelen, VCO 1 = x %, VCO 2 = 100 - x %
  *   - terminal              : frequentie (440 of 261.63 + Enter) en hoofdvolume (v0 .. v100 + Enter)
+ *                             j + Enter: Vader Jakob aan/uit, p + Enter: He's a Pirate aan/uit (zie liedje.c);
+ *                             een toets indrukken stopt het liedje ook
  *
  * Alle pinnen staan in pinnen.h.
  */
@@ -37,11 +39,16 @@
 #include "adc.h"
 #include "toetsen.h"
 #include "frequentie.h"
+#include "liedje.h"
 
 /* ---------- instellingen ---------- */
 
 // Samplefrequentie. 96 kHz -> Nyquist 48 kHz, dus je 20 kHz-filter past ruim.
 #define FS                    96000UL
+
+// Liedje dat meteen na het opstarten begint: LIEDJE_VADER_JAKOB of LIEDJE_PIRAAT,
+// of LIEDJE_GEEN = pas na j of p + Enter in de terminal
+#define LIEDJE_BIJ_OPSTARTEN  LIEDJE_VADER_JAKOB
 
 // Golfvorm bij het opstarten (zoals in het schermontwerp)
 #define VCO1_START_GOLF       GOLF_DRIEHOEK
@@ -51,7 +58,7 @@
 #define VCO2_RATIO_Q8         256UL
 
 // Hoofdvolume bij het opstarten (0..100 %), aan te passen met v0 .. v100 in de terminal
-#define HOOFDVOLUME_START     100UL
+#define HOOFDVOLUME_START     50UL
 
 // Hoe snel het volume naar een nieuwe waarde loopt: zoveel stapjes (van 256) per tik van 10 ms.
 // 8 -> van 0 naar vol in ~0,3 s, zo hoor je geen klik bij een nieuw volume.
@@ -175,7 +182,7 @@ static void volume_herberekenen(void)
 {
     uint32_t p[2] = { pot_procent, 100 - pot_procent };
     for (uint8_t v = 0; v < 2; v++)
-        volume_doel[v] = (hoofdvolume * p[v] * 256UL + 5000UL) / 10000UL;   // % x % -> 0..256
+        volume_doel[v] = (hoofdvolume * p[v] * 256UL + 5000UL) / 10000UL;   // % x % -> 0..256//* p[v]
 }
 
 // Volume stapje voor stapje naar volume_doel (elke TIK_MS)
@@ -199,9 +206,20 @@ static void serieel_invoer(void)
         break;
     case FREQ_INPUT_VOLUME:
         hoofdvolume = w;
-        volume_herberekenen();
+      volume_herberekenen();
         printf("\nHoofdvolume: %lu %%\n", (unsigned long)w);
         break;
+    case FREQ_INPUT_LIEDJE: {
+        liedje_nr_t nr = (w == 'p') ? LIEDJE_PIRAAT : LIEDJE_VADER_JAKOB;
+        if (liedje_bezig() && liedje_huidig() == nr) {     // hetzelfde liedje speelt al: stoppen
+            liedje_stop();
+            printf("\n%s gestopt\n", liedje_naam());
+        } else {                                           // anders beginnen (ook als het andere liedje speelt)
+            liedje_start(nr);
+            printf("\n%s!\n", liedje_naam());
+        }
+        break;
+    }
     default:
         break;
     }
@@ -209,11 +227,18 @@ static void serieel_invoer(void)
 
 /* ---------- gate ---------- */
 
+// Gate en omgekeerde gate altijd samen zetten: GATE_INV_PIN is steeds het tegenovergestelde van GATE_PIN
+static void gate_zet(int hoog)
+{
+    gpio_set_level(GATE_PIN,     hoog ? 1 : 0);
+    gpio_set_level(GATE_INV_PIN, hoog ? 0 : 1);
+}
+
 static void gate_init(void)
 {
-    gpio_set_level(GATE_PIN, GATE_VAN_TOETSEN ? 0 : 1);   // toetsen: begin laag; blokgolf: begin hoog
+    gate_zet(GATE_VAN_TOETSEN ? 0 : 1);                   // toetsen: begin laag; blokgolf: begin hoog
     gpio_config_t io = {
-        .pin_bit_mask = 1ULL << GATE_PIN,
+        .pin_bit_mask = (1ULL << GATE_PIN) | (1ULL << GATE_INV_PIN),
         .mode         = GPIO_MODE_OUTPUT,
         .pull_up_en   = GPIO_PULLUP_DISABLE,
         .pull_down_en = GPIO_PULLDOWN_DISABLE,
@@ -225,15 +250,16 @@ static void gate_init(void)
 static void gate_tik(void)
 {
 #if GATE_VAN_TOETSEN
-    gpio_set_level(GATE_PIN, toetsen_vast() ? 1 : 0);      // hoog zolang er een toets is ingedrukt
+    if (liedje_bezig()) gate_zet(liedje_gate());           // liedje speelt: gate volgt de noten
+    else                gate_zet(toetsen_vast() ? 1 : 0);  // hoog zolang er een toets is ingedrukt
 #else
     static uint32_t ms = 0;
     ms += TIK_MS;
     if (ms == GATE_HOOG_MS) {
-        gpio_set_level(GATE_PIN, 0);
+        gate_zet(0);
     } else if (ms >= GATE_PERIODE_MS) {
         ms = 0;
-        gpio_set_level(GATE_PIN, 1);
+        gate_zet(1);
     }
 #endif
 }
@@ -257,8 +283,10 @@ static void knoppen_verwerken(ucg_t *ucg)
         }
     }
 
-    if (ev.reserve) {
-        printf("Reserveknop (GPIO%d) ingedrukt\n", RESERVE_GPIO);
+    // Zelf spelen stopt het liedje
+    if (ev.toetsen && liedje_bezig()) {
+        liedje_stop();
+        printf("%s gestopt\n", liedje_naam());
     }
 
     // Nieuwe toets: die bepaalt de toonhoogte (bij meerdere tegelijk wint de laatste in de lijst)
@@ -272,9 +300,10 @@ static void knoppen_verwerken(ucg_t *ucg)
     }
 }
 
+
 static void potmeter_lezen(ucg_t *ucg)
 {
-    adc_meting_t m = adc_meet();                    // procent al afgerond op 5-tallen
+    adc_meting_t m = adc_meet();                    // procent al afgerond op 10-tallen
     if ((uint32_t)m.procent != pot_procent) {
         pot_procent = (uint32_t)m.procent;
         volume_herberekenen();
@@ -283,6 +312,7 @@ static void potmeter_lezen(ucg_t *ucg)
     ui_set_volume(ucg, 1, (uint8_t)m.procent);      // tekent alleen opnieuw als het veranderd is
     ui_set_volume(ucg, 2, (uint8_t)m.procent2);
 }
+
 
 static void golf_init(void)
 {
@@ -321,10 +351,15 @@ void app_main(void)
     toetsen_init();
     potmeter_lezen(&ucg);                           // begint meteen op de stand van de potmeter
 
+
     printf("\nVCO-synth ESP32-S3, %lu Hz samplefrequentie, CPU %d MHz\n",
            (unsigned long)FS_ECHT, CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ);
     printf("VCO 1: %s   VCO 2: %s\n", golf_naam[vco_golf[0]], golf_naam[vco_golf[1]]);
     printf("Typ een frequentie (440 of 261.63) of hoofdvolume (v0 .. v100) + Enter\n");
+    printf("Typ j + Enter: Vader Jakob aan/uit, p + Enter: He's a Pirate aan/uit\n");
+
+    liedje_start(LIEDJE_BIJ_OPSTARTEN);             // bij LIEDJE_GEEN gebeurt er niks
+    if (liedje_bezig()) printf("%s!\n", liedje_naam());
 
     TickType_t laatst = xTaskGetTickCount();
     uint32_t tikken = 0, te_laat_gemeld = 0;
@@ -334,6 +369,8 @@ void app_main(void)
 
         serieel_invoer();
         knoppen_verwerken(&ucg);
+        uint32_t f_lied;
+        if (liedje_tik(TIK_MS, &f_lied)) setFreq_centihz(f_lied);   // nieuwe noot van het liedje
         gate_tik();
         if (tikken % ADC_PERIODE_TICKS == 0) potmeter_lezen(&ucg);
         volume_lopen();

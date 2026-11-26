@@ -20,7 +20,7 @@
 
 // SCLK niet sneller maken dan nodig (DAC80501 kan 50 MHz, maar draadjes op een breadboard niet):
 // zoveel keer een "nop" na elke flank. 4 geeft ongeveer 10 MHz SCLK bij 240 MHz CPU.
-#define DAC_WACHT   4
+#define DAC_WACHT   5
 
 static dedic_gpio_bundle_handle_t bus;
 
@@ -70,9 +70,8 @@ void dac80501_init(void)
 
     esp_rom_delay_us(1000);                             // de DAC heeft 250 us POR-tijd nodig
 
-    dac80501_write_reg2(DAC_REG_GAIN, DAC_GAIN_WAARDE, DAC_GAIN_WAARDE);
-    esp_rom_delay_us(1);
-    dac80501_write2(0x8000, 0x8000);                    // midscale = stilte
+    // Soft reset: wist alles wat er tijdens het opstarten van de ESP (zwevende SCLK/SYNC) in de DAC terechtkwam
+  
 }
 
 // In IRAM: snel, en geen last van flash-cache-missers tijdens het versturen

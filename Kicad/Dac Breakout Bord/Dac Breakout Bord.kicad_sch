@@ -1335,7 +1335,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 57.15) (xy 46.99 55.88)
+			(xy 46.99 55.88) (xy 46.99 58.42)
 		)
 		(stroke
 			(width 0)
@@ -2564,83 +2564,6 @@
 			(project "Dac Breakout Bord"
 				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
 					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 46.99 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9f570160-ddd3-4792-9b2b-3757b732b235")
-		(property "Reference" "#PWR011"
-			(at 46.99 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 47.498 62.484 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 46.99 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 46.99 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 46.99 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "07a5f274-b2f1-499a-908d-03d41a8d023f")
-		)
-		(instances
-			(project "Dac Breakout Bord"
-				(path "/de810374-9bc8-4923-8e3b-882be4496c1b"
-					(reference "#PWR011")
 					(unit 1)
 				)
 			)

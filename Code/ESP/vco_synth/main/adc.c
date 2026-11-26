@@ -46,8 +46,8 @@ adc_meting_t adc_meet(void)
     if (p < 0)   p = 0;
     if (p > 100) p = 100;
 
-    // afronden op 5-tallen: 0, 5, 10, ... 100
-    m.procent  = (int16_t)(((p + 2) / 5) * 5);
+    // afronden op 10-tallen: 0, 10, 20, ... 100
+    m.procent  = (int16_t)(((p + 5) / 10) * 10);
     m.procent2 = (int16_t)(100 - m.procent);
 
     return m;

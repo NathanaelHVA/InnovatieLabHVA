@@ -24,14 +24,16 @@
 
 /* ---------- uitgangsbereik (zelfde als op de XMEGA) ----------
  * Volle schaal = 2,5 V (interne referentie) / (REF_DIV ? 2 : 1) * (BUFF_GAIN ? 2 : 1)
- *   REF_DIV 1, BUFF_GAIN 1 -> 0 ... 2,5 V   (standaard hier)
- *   REF_DIV 1, BUFF_GAIN 0 -> 0 ... 1,25 V
+ *   REF_DIV 1, BUFF_GAIN 1 -> 0 ... 2,5 V   (midden 1,25 V, standaard hier)
+ *   REF_DIV 1, BUFF_GAIN 0 -> 0 ... 1,25 V  (midden 0,625 V: Sum Up OUT rond -1,25 V i.p.v. -2,5 V)
  */
 #define DAC_REF_DIV       1
 #define DAC_BUFF_GAIN     1
 
 /* ---------- registers ---------- */
 #define DAC_REG_GAIN      0x04
+#define DAC_REG_TRIGGER   0x05
+#define DAC_SOFT_RESET    0x000A    // code 1010 in TRIGGER: DAC terug naar standaardinstellingen
 #define DAC_REG_DATA      0x08
 #define DAC_GAIN_WAARDE   ((uint16_t)((((DAC_REF_DIV) & 1) << 8) | ((DAC_BUFF_GAIN) & 1)))
 

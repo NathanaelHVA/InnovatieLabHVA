@@ -5,6 +5,8 @@
  *   440     + Enter  -> frequentie 440 Hz         (geeft FREQ_INPUT_FREQ terug)
  *   261.63  + Enter  -> frequentie 261,63 Hz
  *   v50     + Enter  -> volume 50 %, v0 .. v100   (geeft FREQ_INPUT_VOLUME terug)
+ *   j       + Enter  -> Vader Jakob aan/uit       (geeft FREQ_INPUT_LIEDJE terug, waarde 'j')
+ *   p       + Enter  -> He's a Pirate aan/uit     (geeft FREQ_INPUT_LIEDJE terug, waarde 'p')
  */
 
 #include <stdio.h>
@@ -17,6 +19,7 @@ static uint8_t  in_dec;      // we zijn voorbij de punt/komma
 static uint8_t  n_cijfers;   // aantal cijfers getypt
 static uint8_t  fout;        // er is iets ongeldigs getypt
 static uint8_t  is_vol;      // regel begon met 'v': het is een volume
+static uint8_t  lied;        // regel is een liedje: 'j' of 'p' (0 = geen liedje)
 
 static void wis(void)
 {
@@ -27,6 +30,7 @@ static void wis(void)
     n_cijfers = 0;
     fout = 0;
     is_vol = 0;
+    lied = 0;
 }
 
 #if FREQ_INPUT_ECHO
@@ -67,6 +71,10 @@ uint8_t freq_input_poll(uint32_t *waarde)
             }
             ECHO(c);
 
+        } else if ((c == 'j' || c == 'J' || c == 'p' || c == 'P') && n_cijfers == 0 && !in_dec && !is_vol && !lied) {
+            lied = (c == 'p' || c == 'P') ? 'p' : 'j';  // 'j': Vader Jakob, 'p': He's a Pirate
+            ECHO(c);
+
         } else if ((c == 'v' || c == 'V') && n_cijfers == 0 && !in_dec && !is_vol) {
             is_vol = 1;                             // 'v' vooraan: dit wordt een volume
             ECHO(c);
@@ -77,7 +85,19 @@ uint8_t freq_input_poll(uint32_t *waarde)
             ECHO(c);
 
         } else if (c == '\r' || c == '\n') {
-            if (n_cijfers == 0 && !fout && !is_vol) continue;  // lege regel, of de \n na een \r
+            if (n_cijfers == 0 && !fout && !is_vol && !lied) continue;  // lege regel, of de \n na een \r
+
+            if (lied) {
+                uint8_t ok = !fout && n_cijfers == 0;
+                uint8_t l  = lied;
+                wis();
+                if (ok) {
+                    *waarde = l;                    // 'j' of 'p'
+                    return FREQ_INPUT_LIEDJE;
+                }
+                printf("\nOngeldig, typ alleen j of p + Enter\n");
+                continue;
+            }
 
             if (is_vol) {
                 uint8_t ok = !fout && n_cijfers > 0 && hele <= 100;
