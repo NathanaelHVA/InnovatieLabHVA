@@ -487,6 +487,7 @@
       "wire_dangling": "error"
     }
   },
+  "legacy": [],
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
@@ -639,14 +640,14 @@
       "intersheets_ref_show": false,
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,
-      "label_size_ratio": 0.375,
+      "label_size_ratio": 0.25,
       "operating_point_overlay_i_precision": 3,
       "operating_point_overlay_i_range": "~A",
       "operating_point_overlay_v_precision": 3,
       "operating_point_overlay_v_range": "~V",
       "overbar_offset_ratio": 1.23,
-      "pin_symbol_size": 25.0,
-      "text_offset_ratio": 0.15
+      "pin_symbol_size": 0.0,
+      "text_offset_ratio": 0.08
     },
     "legacy_lib_dir": "",
     "legacy_lib_list": [],
@@ -661,21 +662,17 @@
     "top_level_sheets": [
       {
         "filename": "Gehele PCB.kicad_sch",
-        "name": "Gehele PCB",
+        "name": "Hoofdblad",
         "uuid": "2f633eb7-57cd-4a2e-a971-ae8796edfe65"
       }
     ],
-<<<<<<< Updated upstream
-    "used_designators": "#PWR20,#PWR22,#PWR25-42,C7-11,J1-2,J4-5,R36-51,SW1,U3-8",
-=======
-    "used_designators": "#PWR20,#PWR22,#PWR25-42,C7-11,J1-2,J4-5,R36-55,U3-8",
->>>>>>> Stashed changes
+    "used_designators": "#PWR33,#PWR43-55,C12-15,J6-7,R52,R54-56,SW2",
     "variants": []
   },
   "sheets": [
     [
       "2f633eb7-57cd-4a2e-a971-ae8796edfe65",
-      "Gehele PCB"
+      "Hoofdblad"
     ]
   ],
   "text_variables": {},
