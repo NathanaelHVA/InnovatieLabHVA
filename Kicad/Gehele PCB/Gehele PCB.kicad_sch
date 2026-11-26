@@ -6118,6 +6118,16 @@
 	)
 	(wire
 		(pts
+			(xy 292.1 172.72) (xy 293.37 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0485c613-cf70-4503-8c95-f00321172d2c")
+	)
+	(wire
+		(pts
 			(xy 119.38 59.69) (xy 115.57 59.69)
 		)
 		(stroke
@@ -6415,6 +6425,16 @@
 			(type default)
 		)
 		(uuid "10aebfe7-23c1-40e5-b24b-4278ab5ce623")
+	)
+	(wire
+		(pts
+			(xy 271.78 170.18) (xy 276.86 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11329ca6-8cca-418e-a11e-a19753a3b1f6")
 	)
 	(wire
 		(pts
@@ -7208,6 +7228,16 @@
 	)
 	(wire
 		(pts
+			(xy 276.86 175.26) (xy 276.86 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4299083f-5ef0-4ba2-82b5-43671d683bd7")
+	)
+	(wire
+		(pts
 			(xy 102.87 314.96) (xy 106.68 314.96)
 		)
 		(stroke
@@ -7435,6 +7465,16 @@
 			(type default)
 		)
 		(uuid "4f737693-aad5-4ee3-9829-8bc55e005023")
+	)
+	(wire
+		(pts
+			(xy 293.37 180.34) (xy 293.37 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fa9a4a2-16ae-48db-a512-ac491f1a3da6")
 	)
 	(wire
 		(pts
@@ -10208,6 +10248,16 @@
 	)
 	(wire
 		(pts
+			(xy 271.78 175.26) (xy 271.78 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4e2d2e8-30c0-4df7-b94a-ea58d3815499")
+	)
+	(wire
+		(pts
 			(xy 795.02 129.54) (xy 795.02 124.46)
 		)
 		(stroke
@@ -10395,6 +10445,16 @@
 			(type default)
 		)
 		(uuid "ec2c6135-abd4-40aa-8a48-c5dd44f2c1c6")
+	)
+	(wire
+		(pts
+			(xy 276.86 180.34) (xy 293.37 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edc80fda-f444-4e09-a64a-da7993890bc2")
 	)
 	(wire
 		(pts
@@ -16828,6 +16888,84 @@
 			(project "Gehele PCB"
 				(path "/2f633eb7-57cd-4a2e-a971-ae8796edfe65"
 					(reference "R36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 271.78 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a3fe070-6f83-43ff-93eb-74b6bc74c772")
+		(property "Reference" "#PWR042"
+			(at 271.78 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 271.78 180.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 271.78 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 271.78 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2ae31fa1-459e-49b4-83b1-52f69cd75c11")
+		)
+		(instances
+			(project "Gehele PCB"
+				(path "/2f633eb7-57cd-4a2e-a971-ae8796edfe65"
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
